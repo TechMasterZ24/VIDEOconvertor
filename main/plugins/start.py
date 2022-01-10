@@ -14,33 +14,33 @@ from main.plugins.actions import set_thumbnail, rem_thumbnail, heroku_restart
 async def start(event):
     await event.reply(f'{st}', 
                       buttons=[
-                              [Button.inline("Menu.", data="menu")]
+                              [Button.inline("Menu", data="menu")]
                               ])
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} started the BOT')
     
 @Drone.on(events.callbackquery.CallbackQuery(data="menu"))
 async def menu(event):
-    await event.client.send_file(event.chat_id, caption="**📑MENU.**", file=file,
+    await event.client.send_file(event.chat_id, caption="**📑MENU**", file=file,
                     buttons=[[
-                         Button.inline("info.", data="info"),
-                         Button.inline("SOURCE-CODE", data="source")],
+                         Button.inline("info", data="info"),
+                         Button.inline("Updates", data="source")],
                          [
-                         Button.inline("NOTICE.", data="notice"),
-                         Button.inline("Help/SETTINGS.", data="help")],
+                         Button.inline("NOTICE", data="notice"),
+                         Button.inline("Help/SETTINGS", data="help")],
                          [
                          Button.url("DEVELOPER", url=f"{DEV}")]])
     await event.delete()
     
 @Drone.on(events.callbackquery.CallbackQuery(data="menu2"))
 async def menu2(event):
-    await event.edit("**📑MENU.**",
+    await event.edit("**📑MENU**",
                     buttons=[[
-                         Button.inline("info.", data="info"),
-                         Button.inline("SOURCE-CODE", data="source")],
+                         Button.inline("info", data="info"),
+                         Button.inline(Updates", data="source")],
                          [
-                         Button.inline("NOTICE.", data="notice"),
-                         Button.inline("Help/SETTINGS.", data="help")],
+                         Button.inline("NOTICE", data="notice"),
+                         Button.inline("Help/SETTINGS", data="help")],
                          [
                          Button.url("DEVELOPER", url=f"{DEV}")]])
        
@@ -58,27 +58,26 @@ async def notice(event):
 async def source(event):
     await event.edit(source_text,
                     buttons=[[
-                         Button.url("Main.", url="https://github.com/vasusen-code/videoconvertor/tree/main"),
-                         Button.url("PUBLIC", url="https://github.com/vasusen-code/videoconvertor/tree/public")]])
+                         Button.url("Updates Channel", url="https://t.me/Tech_MaserZ"),
                          
                     
 @Drone.on(events.callbackquery.CallbackQuery(data="help"))
 async def help(event):
-    await event.edit('**👥HELP & SETTINGS.**',
+    await event.edit('**👥HELP & SETTINGS**',
                     buttons=[[
                          Button.inline("set THUMBNAIL", data="sett"),
                          Button.inline("rem THUMBNAIL", data='remt')],
                          [
-                         Button.inline("PLUGUNS.", data="plugins"),
+                         Button.inline("PLUGUNS", data="plugins"),
                          Button.inline("restart", data="restart"),
-                         Button.url("SUPPORT.", url=f"{SUPPORT_LINK}")],
+                         Button.url("SUPPORT", url=f"{SUPPORT_LINK}")],
                          [
-                         Button.inline("Menu.", data="menu2")]])
+                         Button.inline("Menu", data="menu2")]])
     
 @Drone.on(events.callbackquery.CallbackQuery(data="plugins"))
 async def plugins(event):
     await event.edit(f'{help_text}',
-                    buttons=[[Button.inline("Menu.", data="menu2")]])
+                    buttons=[[Button.inline("Menu", data="menu2")]])
                    
  #-----------------------------------------------------------------------------------------------                            
     
