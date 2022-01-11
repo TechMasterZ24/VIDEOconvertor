@@ -19,13 +19,13 @@ DEV = "https://t.me/Tech_MasterZ"
 
 spam_notice = "This bot is hosted on heroku, and hence can run just run one process at a time.Spamming the bot or encoding adult videos will lead you to a ban."
 
-JPG = "LOCAL/video_convertor.jpg"
+JPG = "LOCAL/IMG_20220111_040010.jpg"
 
-JPG0 = 'https://telegra.ph/file/d98c559b56ef884ef3bad.jpg'
+JPG0 = "LOCAL/IMG_20220111_040010.jpg"
 
-JPG2 = "LOCAL/20211215_165751.jpg"
+JPG2 = "LOCAL/IMG_20220111_040010.jpg"
 
-JPG3 = "LOCAL/PicsArt_12-16-08.57.15.jpg"
+JPG3 = "LOCAL/IMG_20220111_040010.jpg"
 
-JPG4 = "LOCAL/20211219_000258.jpg"
+JPG4 = "LOCAL/IMG_20220111_040010.jpg"
 
